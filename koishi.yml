@@ -1,0 +1,81 @@
+plugins:
+  server:6u5wzh:
+    port: 5140
+    maxPort: 5149
+  group:jel7rg:
+    admin:17j96o: {}
+    ~bind:128c4t: {}
+    commands:kwmag2:
+      gpt:
+        aliases:
+          /gpt: {}
+    help:bfpnd3: {}
+    ~inspect:4b98ii: {}
+    locales:8ga8gz: {}
+    rate-limit:uydubq: {}
+    telemetry:9xl3to: {}
+  group:xk14kl:
+    actions:pokhd3: {}
+    analytics:qmc1iy: {}
+    ~auth:je9j6a: {}
+    config:gzymkx: {}
+    console:1tjj7c:
+      open: true
+    dataview:drpgem: {}
+    desktop:goq4bh:
+      $if: env.KOISHI_AGENT?.includes('Desktop')
+    explorer:4i6xiv: {}
+    logger:hw1uuz: {}
+    insight:yvtezs: {}
+    market:gd1hep:
+      registry:
+        endpoint: https://registry.npmmirror.com
+      search:
+        endpoint: https://registry.koishi.chat/index.json
+    oobe:772wgd: {}
+    sandbox:zn04qx: {}
+    status:rr4dup: {}
+    theme-vanilla:vpef6q: {}
+  group:v6y6qt:
+    ~database-sqlite:4t3cun: {}
+    database-mysql:jpfbu6:
+      host: 192.168.1.181
+      user: sun
+      password: '550312171'
+      database: eightqq
+    ~database-mongo:tpudpv: {}
+    assets-local:ga2rip: {}
+  group:xzoy3j:
+    ~adapter-discord:6sfdeq: {}
+    ~adapter-kook:h2trtr: {}
+    ~adapter-lark:pysi77: {}
+    ~adapter-line:w38m9x: {}
+    ~adapter-matrix:ud8qxl: {}
+    adapter-qq:68jifz:
+      type: public
+      id: '102008403'
+      secret: lRuAWhfPwGMFuLXU
+      token: yFcM6oouWQlj8CMT1AoBIDYg6OinVaU5
+      sandbox: false
+      endpoint: https://api.sgroup.qq.com/
+      intents:
+        - GUILDS
+        - PUBLIC_GUILD_MESSAGES
+      authType: bearer
+    ~adapter-satori:m6f7yg: {}
+    ~adapter-slack:myt2ze: {}
+    adapter-telegram:qujo4m:
+      token: 6915384780:AAGXukE3i_ClfJM4Un8KYfWBValBJQFxg9k
+      protocol: polling
+      path: /telegram
+      endpoint: https://api.telegram.org
+      proxyAgent: socks://192.168.1.166:57758
+    ~server:qdbbda: {}
+  group:l2w768:
+    $if: env.NODE_ENV === 'development'
+    hmr:0r3eo0:
+      root: .
+  channel:5p1egd:
+    proxyURL: http://192.168.1.166:57759
+    key: sk-b5ff5836e3d0e0353f192e0e63ef84857b5d7d82d1d0e931
+    baseURL: https://api.openai.one/v1
